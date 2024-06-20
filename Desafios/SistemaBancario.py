@@ -25,7 +25,6 @@ Digite: """))
             saldo += deposito
             print(f"Saldo: R${saldo}")
             lista.append(f"Depósito: R${deposito}")
-            #print(lista_depositos)
             continue
     elif operacao == 2 and limite_saque <= 3:
         print(f"Saldo atual: {saldo}")
@@ -47,7 +46,6 @@ Digite: """))
             saldo -= saque
             print(f"\nSaldo: R${saldo}")
             lista.append(f"Saque: R${saque}")
-            #print(lista_saques)
             continue
     elif operacao == 3:
         print("\n-----Extrato-----")
