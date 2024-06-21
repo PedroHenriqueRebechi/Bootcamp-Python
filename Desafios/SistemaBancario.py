@@ -7,7 +7,7 @@ print("\n     SISTEMA BANCÁRIO")
 while True:
 
     operacao = int(input("""
---------------------------                        
+--------------------------              
 [1] Para depositar
 [2] Para sacar
 [3] Ver extrato
@@ -58,7 +58,7 @@ Digite: """))
 
     elif operacao == 3:
         print("\n-----Extrato-----")
-        
+
         for transacao in lista:
             print(transacao)
         print(f"\nSaldo: R${saldo}")
