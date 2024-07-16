@@ -1,0 +1,6 @@
+2024-07-15 23:11:43 - Funcao depositar executada com argumentos ([<PessoaFisica: ('11')>],) e {}. Retornou None
+2024-07-15 23:14:31 - Funcao criar_cliente executada com argumentos ([<PessoaFisica: ('11')>],) e {}. Retornou None
+2024-07-15 23:14:33 - Funcao criar_conta executada com argumentos (1, [<PessoaFisica: ('11')>], [<ContaCorrente: ('0001', '1', 'e')>]) e {}. Retornou None
+2024-07-15 23:14:38 - Funcao depositar executada com argumentos ([<PessoaFisica: ('11')>],) e {}. Retornou None
+2024-07-15 23:14:41 - Funcao depositar executada com argumentos ([<PessoaFisica: ('11')>],) e {}. Retornou None
+2024-07-15 23:14:45 - Funcao sacar executada com argumentos ([<PessoaFisica: ('11')>],) e {}. Retornou None
