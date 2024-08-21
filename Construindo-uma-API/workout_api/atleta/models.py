@@ -1,7 +1,7 @@
 from datetime import datetime
-from sqlalchemy import DateTime, Integer, String, Float
-from sqlalchemy.orm import Mapped, mapped_column
-from Bootcamp-Python-AI-Backend-Developer.Construindo-uma-API.workout_api.contrib.models import BaseModel  # type: ignore
+from sqlalchemy import DateTime, Integer, String, Float, ForeignKey
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+from workout_api.contrib.models import BaseModel 
 
 
 class AtletaModel(BaseModel):
@@ -9,9 +9,13 @@ class AtletaModel(BaseModel):
 
     pk_id: Mapped[int] = mapped_column(Integer, primary_key=True)
     nome: Mapped[str] = mapped_column(String(50), nullable=False)
-    cpf: Mapped[str] = mapped_column(String(11), nullable=False)
+    cpf: Mapped[str] = mapped_column(String(11), unique=True, nullable=False)
     idade: Mapped[int] = mapped_column(Integer, nullable=False)
     peso: Mapped[int] = mapped_column(Float, nullable=False)
     altura: Mapped[int] = mapped_column(Float, nullable=False)
     sexo: Mapped[str] = mapped_column(String(1), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
+    categoria: Mapped['CategoriaModel'] = relationship(back_populates='atleta')
+    categoria_id = Mapped[int] = mapped_column(ForeignKey('categorias.pk_id'))
+    centro_treinamento: Mapped['CentroTreinamentoModel'] = relationship(back_populates='atleta')
+    categoria_id = Mapped[int] = mapped_column(ForeignKey('centro_treinamento.pk_id'))
